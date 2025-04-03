@@ -1,0 +1,154 @@
+.skills {
+    padding: 100px 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skills::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(var(--primary-rgb), 0.03);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+  }
+  
+  .skills::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(var(--secondary-rgb), 0.03);
+    border-radius: 50%;
+    bottom: -100px;
+    left: -100px;
+  }
+  
+  .skills .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .skills-content {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  
+  .skills-info {
+    flex: 1;
+  }
+  
+  .skills-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .skills-info p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+  
+  .experience-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .experience-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+  }
+  
+  .experience-highlight {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-right: 5px;
+  }
+  
+  .skills-bars {
+    flex: 1;
+  }
+  
+  .skill-item {
+    margin-bottom: 25px;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .skill-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .skill-icon {
+    font-size: 1.2rem;
+  }
+  
+  .skill-name h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+  }
+  
+  .skill-percentage {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 992px) {
+    .skills-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills {
+      padding: 70px 0;
+    }
+    
+    .skills-info h3 {
+      font-size: 1.5rem;
+    }
+  }
