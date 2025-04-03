@@ -41,7 +41,7 @@ const About = () => {
           >
             <div className="image-wrapper">
               {/* Replace with your actual image */}
-              <img src="../../images/myprof.png" alt="Megha B" />
+              <img src="../..//myprof.png" alt="Megha B" />
               <div className="image-bg-shape"></div>
             </div>
           </motion.div>
