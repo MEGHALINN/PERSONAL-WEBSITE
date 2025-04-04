@@ -48,7 +48,7 @@ const Projects = () => {
       category: 'web',
       image: '../..//Votify.jpeg',
       github: 'https://github.com/MEGHALINN',
-      description: 'An online voting platform with secure authentication and real-time results visualization developed during my internship.',
+      description: 'An online voting platform with secure authentication and real-time results visualization .',
       technologies: ['React', 'Firebase', 'Chart.js'],
     }
   ];

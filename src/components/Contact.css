@@ -3,6 +3,8 @@
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
+    margin-right:100px;
+    margin-left:100px;
   }
   
   .contact::before {
@@ -76,7 +78,7 @@
   }
   
   .contact-info-item {
-    background: white;
+    background: rgb(48, 46, 46);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -118,7 +120,7 @@
   
   /* Contact Form */
   .contact-form-wrapper {
-    background: white;
+    background: rgb(48, 46, 46);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -169,7 +171,7 @@
     border-radius: 10px;
     font-size: 1rem;
     color: var(--text-dark);
-    background-color: #f9f9f9;
+    background-color: #454343;
     transition: all 0.3s ease;
   }
   
@@ -234,7 +236,7 @@
   .contact-map {
     border-radius: 15px;
     overflow: hidden;
-    background: white;
+    background: rgb(48, 46, 46);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     height: 300px;
   }
@@ -245,7 +247,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: rgb(48, 46, 46);
     color: var(--text-light);
   }
   

@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,10 +19,28 @@ function App() {
     setTimeout(() => setLoading(false), 2000);
   }, []);
 
+  // Animation variants for sections
+  const sectionVariants = {
+    hidden: (direction) => ({
+      x: direction === 'left' ? -100 : direction === 'right' ? 100 : 0,
+      opacity: 0
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 70,
+        damping: 20,
+        duration: 0.8
+      }
+    }
+  };
+
   if (loading) {
     return (
       <div className="loader">
-        <motion.div 
+        <motion.div
           className="loader-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -39,12 +56,54 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      
+      {/* Hero remains without slide animation */}
       <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <Contact />
+      
+      {/* About slides from right */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        custom="right"
+        variants={sectionVariants}
+      >
+        <About />
+      </motion.div>
+      
+      {/* Skills slides from left */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        custom="left"
+        variants={sectionVariants}
+      >
+        <Skills />
+      </motion.div>
+      
+      {/* Projects slides from right */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        custom="right"
+        variants={sectionVariants}
+      >
+        <Projects />
+      </motion.div>
+      
+      {/* Contact slides from left */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        custom="left"
+        variants={sectionVariants}
+      >
+        <Contact />
+      </motion.div>
+      
       <Footer />
     </div>
   );

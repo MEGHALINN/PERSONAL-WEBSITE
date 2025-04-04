@@ -1,8 +1,10 @@
 .skills {
     padding: 100px 0;
-    background-color: #fff;
+    background-color: #0B0B13;
     position: relative;
     overflow: hidden;
+    margin-right:100px;
+    margin-left:100px;
   }
   
   .skills::before {

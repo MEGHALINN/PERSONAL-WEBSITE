@@ -1,7 +1,9 @@
 .projects {
     padding: 100px 0;
-    background-color: #fff;
+    background-color: #0B0B13;
     position: relative;
+    margin-right:100px;
+    margin-left:100px;
   }
   
   .filter-buttons {
@@ -42,7 +44,7 @@
     margin-top: 30px;
   }
   .project-card {
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -94,7 +96,7 @@
     height: 50px;
     border-radius: 50%;
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
+    color: rgb(53, 53, 53);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +170,7 @@
   }
   
   .project-modal {
-    background: white;
+    background: rgb(0, 0, 0);
     width: 100%;
     max-width: 900px;
     border-radius: 15px;

@@ -25,7 +25,6 @@ const Skills = () => {
     { name: 'Python', percentage: 60, icon: <FaPython />, color: '#3776AB' },
     { name: 'MySQL', percentage: 60, icon: <FaDatabase />, color: '#4479A1' },
     { name: 'Unity', percentage: 55, icon: <FaGamepad />, color: '#000000' },
-    { name: 'HTML', percentage: 75, icon: <FaHtml5 />, color: '#E34F26' },
     { name: 'JavaScript', percentage: 65, icon: <FaJs />, color: '#F7DF1E' },
     { name: 'Node.js', percentage: 50, icon: <FaNodeJs />, color: '#339933' }
   ];

@@ -3,6 +3,8 @@
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
+    margin-right:100px;
+    margin-left:100px;
   }
   
   .about::before {

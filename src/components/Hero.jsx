@@ -1,102 +1,74 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
-import './Navbar.css';
+import './Hero.css';
 
-const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark-theme');
-    } else {
-      document.documentElement.classList.remove('dark-theme');
-    }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
+const Hero = () => {
   return (
-    <motion.nav 
-      className={`navbar ${scrolled ? 'scrolled' : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="navbar-container">
-        <motion.div 
-          className="logo"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-        >
-          <a href="#home">MEGHA</a>
-        </motion.div>
+    <div className="hero-section">
+      <div className="hero-container">
+        <div className="sparkle-container">
+          <motion.div 
+            className="sparkle top-left"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >✦</motion.div>
+          <motion.div 
+            className="sparkle top-right"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+          >✦</motion.div>
+          <motion.div 
+            className="sparkle bottom-left"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+          >✦</motion.div>
+          <motion.div 
+            className="sparkle bottom-right"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1 }}
+          >✦</motion.div>
+          
+          <motion.div 
+            className="profile-container"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.3 }}
+          >
+            <div className="profile-image">
+              {/* Replace with your actual profile image */}
+              <img src="../..//myprof.png" alt="Megha B" />
+            </div>
+          </motion.div>
+          
+          <motion.h1 
+            className="title-gradient"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            Web Developer
+          </motion.h1>
+          
+          <motion.div 
+            className="intro-text"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <h2>HI I'm Megha B<span className="wave">ツ</span></h2>
+            <p>
+            A passionate Computer Science Engineering student from Kochi with a keen interest in crafting engaging digital experiences. I believe technology should not only solve problems but also bring joy through thoughtful and seamless interactions. While I enjoy exploring all aspects of development, I find myself drawn toward the creativity in frontend design and the challenge of translating ideas into visually compelling and intuitive interfaces. When I’m not coding or designing, you’ll find me immersed in painting, gaming, listening to music, or indulging in a bit of scrapbook journaling.
+            </p>
+          </motion.div>
 
-        <div className="nav-right">
-          <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            {navLinks.map((link, index) => (
-              <motion.li 
-                key={index}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <a href={link.href} onClick={() => setMenuOpen(false)}>{link.name}</a>
-              </motion.li>
-            ))}
-          </ul>
-
-          <div className="nav-buttons">
-            <motion.button 
-              className="theme-toggle"
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleDarkMode}
-            >
-              {darkMode ? <FaSun /> : <FaMoon />}
-            </motion.button>
-
-            <motion.div 
-              className="menu-toggle"
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleMenu}
-            >
-              {menuOpen ? <FaTimes /> : <FaBars />}
-            </motion.div>
-          </div>
         </div>
       </div>
-    </motion.nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default Hero;

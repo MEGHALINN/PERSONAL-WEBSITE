@@ -4,7 +4,7 @@ import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,16 +22,8 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
       document.documentElement.classList.add('dark-theme');
-    } else {
-      document.documentElement.classList.remove('dark-theme');
-    }
   }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -41,7 +33,6 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -77,13 +68,6 @@ const Navbar = () => {
           </ul>
 
           <div className="nav-buttons">
-            <motion.button 
-              className="theme-toggle"
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleDarkMode}
-            >
-              {darkMode ? <FaSun /> : <FaMoon />}
-            </motion.button>
 
             <motion.div 
               className="menu-toggle"
