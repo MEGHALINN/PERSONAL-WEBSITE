@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import './App.css';
 
 // Components
@@ -19,7 +18,6 @@ function App() {
     setTimeout(() => setLoading(false), 2000);
   }, []);
 
-  // Animation variants for sections
   const sectionVariants = {
     hidden: (direction) => ({
       x: direction === 'left' ? -100 : direction === 'right' ? 100 : 0,
@@ -56,54 +54,49 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      
-      {/* Hero remains without slide animation */}
-      <Hero />
-      
-      {/* About slides from right */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        custom="right"
-        variants={sectionVariants}
-      >
-        <About />
-      </motion.div>
-      
-      {/* Skills slides from left */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        custom="left"
-        variants={sectionVariants}
-      >
-        <Skills />
-      </motion.div>
-      
-      {/* Projects slides from right */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        custom="right"
-        variants={sectionVariants}
-      >
-        <Projects />
-      </motion.div>
-      
-      {/* Contact slides from left */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        custom="left"
-        variants={sectionVariants}
-      >
-        <Contact />
-      </motion.div>
-      
+      <main className="content-wrapper">
+        <Hero />
+        
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom="right"
+          variants={sectionVariants}
+        >
+          <About />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom="left"
+          variants={sectionVariants}
+        >
+          <Skills />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom="right"
+          variants={sectionVariants}
+        >
+          <Projects />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom="left"
+          variants={sectionVariants}
+        >
+          <Contact />
+        </motion.div>
+      </main>
       <Footer />
     </div>
   );

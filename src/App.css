@@ -376,3 +376,37 @@ section {
 .section-in-view .stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
 .section-in-view .stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
 .section-in-view .stagger-children > *:nth-child(5) { transition-delay: 0.5s; }
+/* Wrapper for large screens */
+.content-wrapper {
+  width: 100%;
+  max-width: 1600px; /* Ensures big screens use space */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Ensuring sections don't stretch edge-to-edge unnecessarily */
+section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 2rem;
+}
+
+/* For extra-large screens */
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+
+  .section-header h2 {
+    font-size: 3rem;
+  }
+
+  .loader-text h1 {
+    font-size: 4rem;
+  }
+
+  .loader-text p {
+    font-size: 1.5rem;
+  }
+}
