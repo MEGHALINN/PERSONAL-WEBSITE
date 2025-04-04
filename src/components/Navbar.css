@@ -143,3 +143,14 @@
     padding: 0 1.5rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .nav-links a {
+    padding: 1rem;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}

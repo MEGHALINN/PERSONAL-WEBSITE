@@ -410,3 +410,12 @@ section {
     font-size: 1.5rem;
   }
 }
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the full height */
+}
+
+.content-wrapper {
+  flex: 1; /* Pushes the footer down */
+}

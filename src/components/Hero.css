@@ -3,19 +3,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;  /* Ensure text aligns to center */
   background-color: #0B0B13;
   position: relative;
   overflow: hidden;
   padding: 0 2rem;
+  margin: 0; /* Removed 5% margin */
+  width: 100%;
 }
 
 .hero-container {
-  max-width: 1000px;
+  max-width: 1200px; /* Reduce width to avoid excessive stretching */
   width: 100%;
   text-align: center;
   position: relative;
   z-index: 1;
 }
+
+
+@media (max-width: 600px) {
+  .hero-section {
+    margin: 0 2%;
+    padding: 70px 0;
+  }
+}
+
 
 .sparkle-container {
   position: relative;
@@ -31,22 +43,22 @@
 
 .sparkle.top-left {
   top: 0;
-  left: 10%;
+  left: 5%;
 }
 
 .sparkle.top-right {
   top: 20%;
-  right: 10%;
+  right: 5%;
 }
 
 .sparkle.bottom-left {
-  bottom: 20%;
+  bottom: 10%;
   left: 5%;
 }
 
 .sparkle.bottom-right {
   bottom: 0;
-  right: 15%;
+  right: 5%;
 }
 
 .profile-container {

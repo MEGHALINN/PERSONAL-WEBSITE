@@ -1,12 +1,18 @@
 .skills {
-    padding: 100px 0;
-    background-color: #0B0B13;
-    position: relative;
-    overflow: hidden;
-    margin-right:100px;
-    margin-left:100px;
+  padding: 100px 0;
+  background-color: #0B0B13;
+  position: relative;
+  overflow: hidden;
+  margin: 0 5%;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    margin: 0 2%;
+    padding: 70px 0;
   }
-  
+}
+
   .skills::before {
     content: '';
     position: absolute;

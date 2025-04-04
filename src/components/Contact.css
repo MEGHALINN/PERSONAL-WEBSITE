@@ -3,8 +3,14 @@
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
-    margin-right:100px;
-    margin-left:100px;
+    margin: 0 5%;
+  }
+  
+  @media (max-width: 600px) {
+    .contact {
+      margin: 0 2%;
+      padding: 70px 0;
+    }
   }
   
   .contact::before {
